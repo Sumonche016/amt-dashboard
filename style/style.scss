@@ -13,13 +13,12 @@ a {
   text-decoration: none;
 }
 
-html {
-  font-size: 14px;
-}
+// html {
+//   font-size: 14px;
+// }
 $main-background-color: #f9fcfe;
 $color-primary: #3a3a3a;
 $color-gray-light: #717585;
-
 $color-link: #4b71b6;
 $border-color: #efefef;
 $primary-shadow: 4px 0px 16px 0px #d0d0d040;
@@ -52,14 +51,34 @@ $button-gradient: linear-gradient(90deg, #28ccfd -9.05%, #ae2cff 107.28%);
 }
 
 .nav-btn {
-  width: 15.85rem;
-  height: 3.14rem;
+  width: 13.85rem;
+  height: 2.75rem;
+  //   Width:222px
+  // Height: 44px
   border-radius: 4px;
   background-color: #f5f5f5;
+  cursor: pointer;
 
   font-weight: 400;
 }
 
 .nav-btn:not(:last-child) {
   margin-bottom: 1rem;
+}
+
+// header
+
+.main-header {
+  .heading {
+    color: $color-primary;
+    font-weight: 600;
+  }
+  .user-name {
+    color: $color-primary;
+    font-weight: 400;
+  }
+  .user-role {
+    color: #999999;
+    font-size: 0.8rem;
+  }
 }
