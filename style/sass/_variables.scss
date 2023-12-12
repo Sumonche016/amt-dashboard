@@ -1,0 +1,19 @@
+$main-background-color: #f9fcfe;
+$color-primary: #3a3a3a;
+$color-gray-light: #717585;
+$color-link: #4b71b6;
+$border-color: #efefef;
+$primary-shadow: 4px 0px 16px 0px #d0d0d040;
+$button-gradient: linear-gradient(90deg, #28ccfd -9.05%, #ae2cff 107.28%);
+
+//media query manager
+
+// 0-600:  phone
+// 600-900:  tab
+// 900-<:   desktop
+
+@mixin respond-phone {
+  @media screen and (max-width: 600px) {
+    @content;
+  }
+}

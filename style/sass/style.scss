@@ -13,32 +13,73 @@ a {
   text-decoration: none;
 }
 
-// html {
-//   font-size: 14px;
-// }
-$main-background-color: #f9fcfe;
-$color-primary: #3a3a3a;
-$color-gray-light: #717585;
-$color-link: #4b71b6;
-$border-color: #efefef;
-$primary-shadow: 4px 0px 16px 0px #d0d0d040;
-$button-gradient: linear-gradient(90deg, #28ccfd -9.05%, #ae2cff 107.28%);
+@import "_variables";
+
+html {
+  font-size: 16px;
+
+  @include respond-phone {
+    font-size: 12px;
+  }
+}
 
 .side-nav {
-  width: 260px;
+  width: 16.25rem;
   box-shadow: $primary-shadow;
+
+  &__close-icon {
+    display: none;
+    cursor: pointer;
+
+    @include respond-phone {
+      display: flex;
+    }
+  }
   &__link {
     color: $color-gray-light;
   }
+  &__logo {
+    @include respond-phone {
+      display: none !important;
+    }
+  }
+
+  @include respond-phone {
+    height: 100vh;
+    position: absolute;
+    // top: 5rem;
+    left: -100%;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+}
+
+.show-sidenav {
+  left: 0;
 }
 
 .main-content {
   flex: 1 1 0%;
+
+  .logo {
+    width: 6.66rem;
+    display: none;
+    @include respond-phone {
+      display: inline-block;
+    }
+  }
+  @include respond-phone {
+    padding: 0.5rem !important;
+  }
 }
 
 .main-wrapper {
   background-color: $main-background-color;
   height: 100vh;
+
+  @include respond-phone {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .active-nav-btn {
@@ -80,5 +121,9 @@ $button-gradient: linear-gradient(90deg, #28ccfd -9.05%, #ae2cff 107.28%);
   .user-role {
     color: #999999;
     font-size: 0.8rem;
+  }
+
+  @include respond-phone {
+    padding: 0.5rem !important;
   }
 }
