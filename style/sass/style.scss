@@ -60,6 +60,17 @@ html {
 .main-content {
   flex: 1 1 0%;
 
+  .heading {
+    display: inline-block;
+    @include respond-phone {
+      display: none;
+    }
+
+    @include respond-phone {
+      padding: 0.5rem !important;
+    }
+  }
+
   .logo {
     width: 6.66rem;
     display: none;
@@ -125,5 +136,39 @@ html {
 
   @include respond-phone {
     padding: 0.5rem !important;
+  }
+}
+
+//total stats
+.stats-container {
+  .stats-card {
+    border: 1px solid $border-color;
+    background-color: #fff;
+    border-radius: 8px;
+
+    .stats-number {
+      color: $color-link;
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+
+    .stats-name {
+      color: $color-gray-light;
+      margin: 0;
+    }
+    .round-shape {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+    }
+    .total-students {
+      background-color: #f0f8ff;
+    }
+    .total-registration {
+      background-color: #ffe7e3;
+    }
+    .total-instructor {
+      background-color: #fab2b2;
+    }
   }
 }

@@ -61,6 +61,19 @@ html {
 .main-content {
   flex: 1 1 0%;
 }
+.main-content .heading {
+  display: inline-block;
+}
+@media screen and (max-width: 600px) {
+  .main-content .heading {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main-content .heading {
+    padding: 0.5rem !important;
+  }
+}
 .main-content .logo {
   width: 6.66rem;
   display: none;
@@ -125,4 +138,33 @@ html {
   .main-header {
     padding: 0.5rem !important;
   }
+}
+
+.stats-container .stats-card {
+  border: 1px solid #efefef;
+  background-color: #fff;
+  border-radius: 8px;
+}
+.stats-container .stats-card .stats-number {
+  color: #4b71b6;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.stats-container .stats-card .stats-name {
+  color: #717585;
+  margin: 0;
+}
+.stats-container .stats-card .round-shape {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+.stats-container .stats-card .total-students {
+  background-color: #f0f8ff;
+}
+.stats-container .stats-card .total-registration {
+  background-color: #ffe7e3;
+}
+.stats-container .stats-card .total-instructor {
+  background-color: #fab2b2;
 }/*# sourceMappingURL=style.css.map */
